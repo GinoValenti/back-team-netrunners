@@ -1,6 +1,6 @@
 let itinerary = [
     {
-        'cityId': '636c276b651a6e132a2d0ca9',
+        'cityId': '636c38ba4037f6cbbc23c7db',
         'name': 'Buenos Aires',
         'photo': [
             
@@ -19,7 +19,7 @@ let itinerary = [
         'userId':  '636c179503533f0d08013855',
     },
     {
-        'cityId': '636c276b651a6e132a2d0caa',
+        'cityId': '636c38ba4037f6cbbc23c7dc',
         'name': 'Ciudad de Mexico',
         'photo': [
            
@@ -38,7 +38,7 @@ let itinerary = [
         'userId':  '636c179503533f0d08013856',
     },
     {
-        'cityId': '636c276b651a6e132a2d0cab',
+        'cityId': '636c38ba4037f6cbbc23c7dd',
         'name': 'Lima',
         'photo': [
             
@@ -57,7 +57,7 @@ let itinerary = [
         'userId':  'adm1636c179503533f0d08013854',
     },
     {
-        'cityId': '636c276b651a6e132a2d0cac',
+        'cityId': '636c38ba4037f6cbbc23c7de',
         'name': 'London',
         'photo': [
             
@@ -76,7 +76,7 @@ let itinerary = [
         'userId':  '636c179503533f0d08013853',
     },
     {
-        'cityId': '636c276b651a6e132a2d0cad',
+        'cityId': '636c38ba4037f6cbbc23c7df',
         'name': 'Moskau',
         'photo': [
             
@@ -95,7 +95,7 @@ let itinerary = [
         'userId':  '636c179503533f0d08013856',
     },
     {
-        'cityId': '636c276b651a6e132a2d0cae',
+        'cityId': '636c38ba4037f6cbbc23c7e0',
         'name': 'Orlando',
         'photo': [
             
@@ -122,10 +122,12 @@ const Itinerary = require('../Itinerary')
 
 itinerary.forEach(elemento=> {
     Itinerary.create({
+        cityId: elemento.cityId,
         name: elemento.name,
         photo: elemento.image,
         description: elemento.description,
         price: elemento.price,
         duration: elemento.duration,
+        userId: elemento.userId
     })
 })
