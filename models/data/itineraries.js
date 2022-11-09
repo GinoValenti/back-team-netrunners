@@ -1,6 +1,6 @@
 let itinerary = [
     {
-        'cityId': '636c276b651a6e132a2d0ca9',
+        'cityId': '636c34f71a5976b71eee11dd',
         'name': 'Buenos Aires',
         'photo': [
             
@@ -19,7 +19,7 @@ let itinerary = [
         'userId':  '636c179503533f0d08013855',
     },
     {
-        'cityId': '636c276b651a6e132a2d0caa',
+        'cityId': '636c34f71a5976b71eee11de',
         'name': 'Ciudad de Mexico',
         'photo': [
            
