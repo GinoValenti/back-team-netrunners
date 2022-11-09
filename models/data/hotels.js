@@ -14,7 +14,7 @@ let HotelsData = [
         
     ],
     "capacity":7000,
-    "citiId":"636c276b651a6e132a2d0ca9",
+    "citiId":"636c38ba4037f6cbbc23c7db",
     "userId":"636c179503533f0d08013855"},
     {
      
@@ -31,7 +31,7 @@ let HotelsData = [
         
     ],
     "capacity":7500,
-    "citiId":"636c276b651a6e132a2d0caa",
+    "citiId":"636c38ba4037f6cbbc23c7dc",
     "userId":"636c179503533f0d08013855"},
     {
      
@@ -48,7 +48,7 @@ let HotelsData = [
         
     ],
     "capacity":3500,
-    "citiId":"636c276b651a6e132a2d0cab",
+    "citiId":"636c38ba4037f6cbbc23c7dd",
     "userId":"636c179503533f0d08013855"},
     {
      
@@ -65,7 +65,7 @@ let HotelsData = [
         
     ],
     "capacity":4500,
-    "citiId":"636c276b651a6e132a2d0cac",
+    "citiId":"636c38ba4037f6cbbc23c7de",
     "userId":"636c179503533f0d08013855"},
 
     {
@@ -83,7 +83,7 @@ let HotelsData = [
         
     ],
     "capacity":5500,
-    "citiId":"636c276b651a6e132a2d0cad",
+    "citiId":"636c38ba4037f6cbbc23c7df",
     "userId":"636c179503533f0d08013855"},
 
     {
@@ -101,7 +101,7 @@ let HotelsData = [
         
     ],
     "capacity":5500,
-    "citiId":"636c276b651a6e132a2d0cae",
+    "citiId":"636c38ba4037f6cbbc23c7e0",
     "userId":"636c179503533f0d08013856"},
 
     {
@@ -119,7 +119,7 @@ let HotelsData = [
         
     ],
     "capacity":5500,
-    "citiId":"636c276b651a6e132a2d0caf",
+    "citiId":"636c38ba4037f6cbbc23c7e1",
     "userId":"636c179503533f0d08013856"},
 
     {
@@ -137,7 +137,7 @@ let HotelsData = [
         
     ],
     "capacity":2500,
-    "citiId":"636c276b651a6e132a2d0cb0",
+    "citiId":"636c38ba4037f6cbbc23c7e2",
     "userId":"636c179503533f0d08013856"},
 
 
@@ -157,7 +157,7 @@ let HotelsData = [
         
     ],
     "capacity":2500,
-    "citiId":"636c276b651a6e132a2d0cb1",
+    "citiId":"636c38ba4037f6cbbc23c7e3",
     "userId":"636c179503533f0d08013856"},
 
     {
@@ -175,7 +175,7 @@ let HotelsData = [
         
     ],
     "capacity":2500,
-    "citiId":"636c276b651a6e132a2d0cb2",
+    "citiId":"636c38ba4037f6cbbc23c7e4",
     "userId":"636c179503533f0d08013853"},
 
     {
@@ -193,7 +193,7 @@ let HotelsData = [
     
 ],
 "capacity":5000,
-"citiId":"636c276b651a6e132a2d0cb3",
+"citiId":"636c38ba4037f6cbbc23c7e5",
 "userId":"636c179503533f0d08013853"},
 
 {
@@ -211,7 +211,7 @@ let HotelsData = [
     
 ],
 "capacity":5000,
-"citiId":"636c276b651a6e132a2d0cb4",
+"citiId":"636c38ba4037f6cbbc23c7e6",
 "userId":"636c179503533f0d08013854"},
 
 
