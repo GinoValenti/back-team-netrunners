@@ -16,7 +16,7 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 500,
         'duration': 1,
-        'userId':  'adm1',
+        'userId':  '636c179503533f0d08013855',
     },
     {
         'cityId': '636c276b651a6e132a2d0caa',
@@ -35,7 +35,7 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 800,
         'duration': 1,
-        'userId':  'adm1',
+        'userId':  '636c179503533f0d08013856',
     },
     {
         'cityId': '636c276b651a6e132a2d0cab',
@@ -54,7 +54,7 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 200,
         'duration': 1,
-        'userId':  'adm1',
+        'userId':  'adm1636c179503533f0d08013854',
     },
     {
         'cityId': '636c276b651a6e132a2d0cac',
@@ -73,7 +73,7 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 100,
         'duration': 1,
-        'userId':  'adm1',
+        'userId':  '636c179503533f0d08013853',
     },
     {
         'cityId': '636c276b651a6e132a2d0cad',
@@ -92,7 +92,7 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 150,
         'duration': 1,
-        'userId':  'adm1',
+        'userId':  '636c179503533f0d08013856',
     },
     {
         'cityId': '636c276b651a6e132a2d0cae',
@@ -111,7 +111,7 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 599,
         'duration': 1,
-        'userId':  'adm1',
+        'userId':  '636c179503533f0d08013854',
     }
 
 ]
