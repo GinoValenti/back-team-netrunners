@@ -14,8 +14,8 @@ let HotelsData = [
         
     ],
     "capacity":7000,
-    "citiId":"636c276b651a6e132a2d0ca9",
-    "userId":"636abbefbe0d7c1423a38379"},
+    "citiId":"636c38ba4037f6cbbc23c7db",
+    "userId":"636c179503533f0d08013855"},
     {
      
     "name": "Gran Hotel Mexico",
@@ -31,8 +31,8 @@ let HotelsData = [
         
     ],
     "capacity":7500,
-    "citiId":"636c276b651a6e132a2d0caa",
-    "userId":"636abbefbe0d7c1423a3837a"},
+    "citiId":"636c38ba4037f6cbbc23c7dc",
+    "userId":"636c179503533f0d08013855"},
     {
      
     "name": "The Westin Lima Hotel",
@@ -48,8 +48,8 @@ let HotelsData = [
         
     ],
     "capacity":3500,
-    "citiId":"636c276b651a6e132a2d0cab",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7dd",
+    "userId":"636c179503533f0d08013855"},
     {
      
     "name": "The Ritz",
@@ -65,8 +65,8 @@ let HotelsData = [
         
     ],
     "capacity":4500,
-    "citiId":"636c276b651a6e132a2d0cac",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7de",
+    "userId":"636c179503533f0d08013855"},
 
     {
      
@@ -83,8 +83,8 @@ let HotelsData = [
         
     ],
     "capacity":5500,
-    "citiId":"636c276b651a6e132a2d0cad",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7df",
+    "userId":"636c179503533f0d08013855"},
 
     {
      
@@ -101,8 +101,8 @@ let HotelsData = [
         
     ],
     "capacity":5500,
-    "citiId":"636c276b651a6e132a2d0cae",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7e0",
+    "userId":"636c179503533f0d08013856"},
 
     {
      
@@ -119,8 +119,8 @@ let HotelsData = [
         
     ],
     "capacity":5500,
-    "citiId":"636c276b651a6e132a2d0caf",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7e1",
+    "userId":"636c179503533f0d08013856"},
 
     {
      
@@ -137,8 +137,8 @@ let HotelsData = [
         
     ],
     "capacity":2500,
-    "citiId":"636c276b651a6e132a2d0cb0",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7e2",
+    "userId":"636c179503533f0d08013856"},
 
 
 
@@ -157,8 +157,8 @@ let HotelsData = [
         
     ],
     "capacity":2500,
-    "citiId":"636c276b651a6e132a2d0cb1",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7e3",
+    "userId":"636c179503533f0d08013856"},
 
     {
         
@@ -175,8 +175,8 @@ let HotelsData = [
         
     ],
     "capacity":2500,
-    "citiId":"636c276b651a6e132a2d0cb2",
-    "userId":"636abbefbe0d7c1423a3837b"},
+    "citiId":"636c38ba4037f6cbbc23c7e4",
+    "userId":"636c179503533f0d08013853"},
 
     {
     
@@ -193,8 +193,8 @@ let HotelsData = [
     
 ],
 "capacity":5000,
-"citiId":"636c276b651a6e132a2d0cb3",
-"userId":"636abbefbe0d7c1423a3837c"},
+"citiId":"636c38ba4037f6cbbc23c7e5",
+"userId":"636c179503533f0d08013853"},
 
 {
     
@@ -211,8 +211,8 @@ let HotelsData = [
     
 ],
 "capacity":5000,
-"citiId":"636c276b651a6e132a2d0cb4",
-"userId":"636abbefbe0d7c1423a3837c"},
+"citiId":"636c38ba4037f6cbbc23c7e6",
+"userId":"636c179503533f0d08013854"},
 
 
 
