@@ -5,7 +5,8 @@ const schema = new mongoose.Schema({
     name: {type: String, required: true},
     photo: [{type: String, required: true}],
     capacity: {type: Number, required: true},
-    citiId: {type: String, required: true},
+    citiId:{type: mongoose.Types.ObjectId, ref: 'city', required: true},
+    userId:{type: mongoose.Types.ObjectId, ref: 'user', required: true},
 })
 
 
