@@ -1,9 +1,14 @@
-var express = require('express');
-var router = express.Router();
+let router = require("express").Router()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+let hotels = require("./hotel") //ubicacion de las rutas de hoteles
+ router.use("/", hotels)
 
-module.exports = router;
+
+
+
+
+
+
+
+
+module.exports = router 

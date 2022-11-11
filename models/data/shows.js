@@ -1,6 +1,6 @@
 let shows = [ 
     {
-        'hotelId': '636c39899a040b39571e3058' ,
+        'hotelId': '636d6c8e85fd104ecbe73c11' ,
         'name': 'Linkin Park',
         "description":"Live concert of one of the best rock bands in the world.",
         'photo': 'https://kubomusical.com/wp-content/uploads/2020/05/8b1e81bb-2e0f-4831-ae90-4dac1e318050.jpg',
@@ -10,7 +10,7 @@ let shows = [
     },
     {
   
-        'hotelId': '636c39899a040b39571e305b' ,
+        'hotelId': '636d6c8e85fd104ecbe73c10' ,
         'name': 'Pirates of the Caribean show',
         "description":"A pirates of the caribbean show for kids.",
         'photo': 'https://i.ytimg.com/vi/v0PhfbpNu-4/maxresdefault.jpg',
@@ -20,7 +20,7 @@ let shows = [
     },
     {
   
-        'hotelId': '636c39899a040b39571e3061' ,
+        'hotelId': '636d6c8e85fd104ecbe73c14' ,
         'name': 'Comicon',
         "description":"The best event for comic fans",
         'photo': 'https://media.wired.com/photos/62d7615394f7f03fb5e0c44e/master/pass/Comic-Con-Is-Back-Culture-1163223301.jpg',
@@ -31,7 +31,7 @@ let shows = [
 
 {
 
-    "hotelId":"636c39899a040b39571e305c",
+    "hotelId":"636d6c8e85fd104ecbe73c11",
     "name":"Fashion show",
     "description":"Fashion Show to look amazing clothes",
     "photo":"https://d1e00ek4ebabms.cloudfront.net/production/c7f3c580-eb21-4329-8b38-b00b8caff6a7.jpg",
@@ -41,7 +41,7 @@ let shows = [
 },
 {
 
-    "hotelId":"636c39899a040b39571e305a",
+    "hotelId":"636d6c8e85fd104ecbe73c13",
     "name":"Metallica!",
     "description":"Live concert of one of the best rock band in the world.",
     "photo":"https://akamai.sscdn.co/uploadfile/letras/fotos/c/b/e/3/cbe32534b5d42220e47b16a1a9c9c0dd.jpg",
@@ -51,7 +51,7 @@ let shows = [
 },
 {
 
-    "hotelId":"636c39899a040b39571e3056",
+    "hotelId":"636d6c8e85fd104ecbe73c0b",
     "name":"Coldplay",
     "description":"Live concert of one of the best band in the world.",
     "photo":"https://www.clarin.com/img/2021/12/06/coldplay-mantiene-en-pie-su___ATkysKcNG_2000x1500__1.jpg",
