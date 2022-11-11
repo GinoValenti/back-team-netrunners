@@ -5,7 +5,7 @@ const schema = new mongoose.Schema({
     continent: {type: String, required: true},
     image: {type: String, required: true},
     population: {type: Number, required: true},
-    userId:{type: String, required: true},
+    userId:{type: mongoose.Types.ObjectId, ref: 'user', required: true},
 })
 
 const City = mongoose.model('city', schema)
