@@ -60,19 +60,14 @@ read: async(req, res) =>{
   one: async(req,res) => { 
     let { id } = req.params
     try {
-        let all = await Hotel.find({ _id: id })
-        if (all) {
+        let hotel = await Hotel.find({ _id: id })
+        if (hotel) {
             res.status(200).json({
-                response: all,
+             hotel,
                 success: true,
                 message: "A hotel has been found"
             })
-        } else {
-            res.status(404).json({
-                success: false,
-                message: "What are you searching bro?!!!"
-            })
-        }            
+        }           
     } catch(error) {
         res.status(400).json({
             success: false,
