@@ -1,6 +1,6 @@
 let cities = [
     {
-    
+ 
         'title': 'Buenos Aires',
         'continent': 'America',
         'image': 'https://www.buenosaires.gob.ar/sites/gcaba/files/al_avenida_9_dejulio.jpg',
