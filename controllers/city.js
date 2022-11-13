@@ -34,7 +34,7 @@ const controller = {
       };
     }
     try {
-      let allcities = await City.find(query)
+      let allcities = await City.find(query).populate("userId")
       if (allcities) {
         res.status(200).json({
           allcities,
@@ -55,6 +55,25 @@ const controller = {
     }
   },
 
+  readOne: async (req, res) => {
+    let { id } = req.params;
+    try {
+      let city = await City.find({_id: id})
+      if (city) {
+        res.status(200).json({
+          city,
+          success: true,
+          message: "This city has itineraries",
+        })
+      }
+    } catch(error){
+      res.status(400).json({
+        succes: false,
+        message: error.message
+      })
+    }
+  },
+ 
   update: async(req,res) => {
 
     let { id } = req.params

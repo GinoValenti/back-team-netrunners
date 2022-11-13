@@ -2,10 +2,15 @@ const Itinerary = require("../models/Itinerary")
 const { query } = require("express");
 
 const controller = {
-    read: async (req, res) => {
-
+    readOne: async (req, res) => {
+      let query = {}
+      if (req.query.cityId){
+        query = {query,
+            cityId: req.query.cityId,
+        }
+      }
         try {
-          let allcities = await Itinerary.find().populate("city");
+          let allcities = await Itinerary.find(query).populate('userId')
           if (allcities) {
             res.status(200).json({
               allcities,

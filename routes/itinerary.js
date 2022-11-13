@@ -1,9 +1,9 @@
 let router = require('express').Router()
 
-let {create, read, update, destroy} = require('../controllers/itinerary')
+const { readOne } = require('../controllers/itinerary')
 
 
-router.get("/itinerary", read)
+router.get("/", readOne)
 
 
 module.exports = router
