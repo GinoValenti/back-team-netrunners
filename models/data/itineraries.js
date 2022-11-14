@@ -1,6 +1,6 @@
 let itinerary = [
     {
-        'cityId': '636c38ba4037f6cbbc23c7db',
+        'cityId': "636d6b01319c760fc3cf34f7",
         'name': 'Buenos Aires',
         'photo': [
             
@@ -19,7 +19,7 @@ let itinerary = [
         'userId':  '636c179503533f0d08013855',
     },
     {
-        'cityId': '636c38ba4037f6cbbc23c7dc',
+        'cityId': "636d6b01319c760fc3cf34f8",
         'name': 'Ciudad de Mexico',
         'photo': [
            
@@ -38,7 +38,7 @@ let itinerary = [
         'userId':  '636c179503533f0d08013856',
     },
     {
-        'cityId': '636c38ba4037f6cbbc23c7dd',
+        'cityId': "636d6b01319c760fc3cf34f9",
         'name': 'Lima',
         'photo': [
             
@@ -54,10 +54,10 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 200,
         'duration': 1,
-        'userId':  'adm1636c179503533f0d08013854',
+        'userId':  "636c179503533f0d08013856",
     },
     {
-        'cityId': '636c38ba4037f6cbbc23c7de',
+        'cityId': "636d6b01319c760fc3cf34fa",
         'name': 'London',
         'photo': [
             
@@ -70,13 +70,13 @@ let itinerary = [
                  'https://loving-london.com/es/wp-content/uploads/2017/01/buckingham-palace-170120142034002-1920x960.jpg'
             
         ],
-        'description': 'The definitive activitie',
+        'description': "The definitive activitie",
         'price': 100,
         'duration': 1,
-        'userId':  '636c179503533f0d08013853',
+        'userId':  "636c179503533f0d08013853",
     },
     {
-        'cityId': '636c38ba4037f6cbbc23c7df',
+        'cityId': "636d6b01319c760fc3cf34fb",
         'name': 'Moskau',
         'photo': [
             
@@ -92,10 +92,10 @@ let itinerary = [
         'description': 'The definitive activitie',
         'price': 150,
         'duration': 1,
-        'userId':  '636c179503533f0d08013856',
+        'userId':  "636c179503533f0d08013856",
     },
     {
-        'cityId': '636c38ba4037f6cbbc23c7e0',
+        'cityId': "636d6b01319c760fc3cf34fc",
         'name': 'Orlando',
         'photo': [
             
@@ -108,10 +108,10 @@ let itinerary = [
                  'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/69/f3/0c/universal-orlando-resort.jpg?w=1200&h=1200&s=1'
             
         ],
-        'description': 'The definitive activitie',
+        'description': "The definitive activitie",
         'price': 599,
         'duration': 1,
-        'userId':  '636c179503533f0d08013854',
+        'userId':  "636c179503533f0d08013854",
     }
 
 ]

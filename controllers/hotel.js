@@ -3,11 +3,7 @@ const { query } = require("express");
 const controller = {
     
     create: async(req,respuesta) => { 
-    
-        
-        
-        
-      
+
         try {
             let new_hotel = await Hotel.create(req.body)
             respuesta.status(201).json({
