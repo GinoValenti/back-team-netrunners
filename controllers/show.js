@@ -25,6 +25,26 @@ const controller = {
         });
       }
     },
+    create: async(req,respuesta) => { 
+
+      try {
+          let new_show = await Show.create(req.body)
+          respuesta.status(201).json({
+              id: new_show._id,
+              success: true,
+              message: "el show se creó satisfactoriamente"
+          })
+      } catch(error) {
+          respuesta.status(400).json({
+              success: false,
+              message: error.message
+          })
+      }
+  },
+
+
+
+
   };
   module.exports = controller;
   
