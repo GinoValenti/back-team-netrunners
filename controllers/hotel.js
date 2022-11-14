@@ -52,7 +52,26 @@ read: async(req, res) =>{
         message: error.message,
       });
     }
-  }
+  },
+  one: async(req,res) => { 
+    let { id } = req.params
+    try {
+        let hotel = await Hotel.find({ _id: id })
+        if (hotel) {
+            res.status(200).json({
+             hotel,
+                success: true,
+                message: "A hotel has been found"
+            })
+        }           
+    } catch(error) {
+        res.status(400).json({
+            success: false,
+            message:"What are you searching bro?!!!"
+        })
+    }        
+},
 }
+
 
     module.exports = controller

@@ -10,7 +10,7 @@ const schema = new mongoose.Schema({
     code:{type: String, required: true},
     verified:{type: Boolean, required: true},
     logged:{type: Boolean, required: true},
-
+    
 })
 const User = mongoose.model("user", schema)
 module.exports= User
