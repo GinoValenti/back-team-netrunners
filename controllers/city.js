@@ -27,10 +27,10 @@ const controller = {
         continent: req.query.continent,
       };
     }
-    if (req.query.name) {
+    if (req.query.title) {
       query = {
         ...query,
-        name: { $regex: req.query.name, $options: "i" },
+        title: { $regex: req.query.title, $options: "i" },
       };
     }
     try {
