@@ -101,8 +101,9 @@ const controller = {
     }
   },
 
-  
 
+
+  
   destroy: async(req,res) => {
 
     let { id } = req.params
@@ -130,6 +131,8 @@ const controller = {
     }
   }
 }
+  
+
 
 
 
