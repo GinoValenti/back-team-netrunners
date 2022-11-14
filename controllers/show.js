@@ -1,33 +1,30 @@
-const Hotel = require('../models/Show')
 const { query } = require("express");
+const Show = require("../models/Show");
+
 const controller = {
-    
-   
-    
-        
-        
-        
-      
-       
-  one: async(req,res) => { 
-    let { id } = req.params
-    try {
-        let show = await Show.find()
+    readOne: async (req, res) => {
+      let query = {};
+      if (req.query.hotelId) {
+        query = {query,
+            hotelId: req.query.hotelId,
+        };
+      }
+      try {
+        let show = await Show.find(query)
         if (show) {
-            res.status(200).json({
-             show,
-                success: true,
-                message: "A hotel has been found"
-            })
-        }           
-    } catch(error) {
+          res.status(200).json({
+            show,
+            success: true,
+            message: "shows are here",
+          });
+        }
+      } catch (error) {
         res.status(400).json({
-            success: false,
-            message:"What are you searching bro?!!!"
-        })
-    }        
-}}
-
-
-
-    module.exports = controller
+          success: false,
+          message: error.message,
+        });
+      }
+    },
+  };
+  module.exports = controller;
+  
