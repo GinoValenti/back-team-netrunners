@@ -1,9 +1,11 @@
 let router = require('express').Router()
 
-const { readOne } = require('../controllers/itinerary')
+const { readOne, create, update } = require('../controllers/itinerary')
 
 
 router.get("/", readOne)
+router.post("/", create)
+router.put("itinerary/:id", update)
 
 
 module.exports = router
