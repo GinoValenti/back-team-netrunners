@@ -52,7 +52,7 @@ const controller = {
         let { id } = req.params
      
         try {
-            let one = await City.findOneAndUpdate({ _id: id }, req.body, {new: true})
+            let one = await Itinerary.findOneAndUpdate({ _id: id }, req.body, {new: true})
             if (one) {
               res.status(200).json({
                 id: one._id,
