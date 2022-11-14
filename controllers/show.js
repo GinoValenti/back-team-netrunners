@@ -41,6 +41,34 @@ const controller = {
           })
       }
   },
+  update: async(req,res)=>{
+    let {id} = req.params
+    try {
+      let uno = await Show.findOneAndUpdate({_id: id},req.body,{new:true})
+  if(uno){
+    res.status(200).json({
+      id: uno._id,
+      success: true,
+      message: "el show se modifico satisfactoriamente"
+    })
+  }else{
+    res.status(404).json({
+      success: fals,
+      message: "el hotel no se encontro"
+    })
+  }
+    } catch (error) {
+      res.status(400).json({
+        success:false,
+        menssage:error.message
+      })
+  
+    }
+  },
+
+
+
+
 
 
 
