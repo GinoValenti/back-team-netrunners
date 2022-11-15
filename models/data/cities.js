@@ -1,11 +1,11 @@
 let cities = [
     {
  
-        'title': 'Buenos Aires',
-        'continent': 'America',
-        'image': 'https://www.buenosaires.gob.ar/sites/gcaba/files/al_avenida_9_dejulio.jpg',
-        'population':  125000000,
-        'userId':  '636c179503533f0d08013855',
+        "title": "Buenos Aires",
+        "continent": "America",
+        "image": "https://www.buenosaires.gob.ar/sites/gcaba/files/al_avenida_9_dejulio.jpg",
+        "population":  125000000,
+        "userId":  "636c179503533f0d08013855",
     },
     {
  
