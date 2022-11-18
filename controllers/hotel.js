@@ -108,7 +108,7 @@ if(uno){
   })
 }else{
   res.status(404).json({
-    success: fals,
+    success: false,
     message: "el hotel no se encontro"
   })
 }
