@@ -35,7 +35,7 @@ read: async(req, res) =>{
     }
     try {
       let allhotels = await Hotel.find(query).sort(order);
-      if (!allhotels.lenght==0) {
+      if (allhotels) {
         res.status(200).json({
        allhotels,
           success: true,
