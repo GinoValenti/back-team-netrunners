@@ -14,7 +14,7 @@ const validator = ( schema ) => [
        console.log(data.error)
        console.log(data.error.details);;
         if (data.error) {
-            return res.json({
+            return res.status(400).json({
                 success: false,
                 message: data.error.details
                 // data.error.details es el array con todos los errores 
