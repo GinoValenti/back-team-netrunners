@@ -9,6 +9,7 @@ const controller = {
             respuesta.status(201).json({
                 id: new_hotel._id,
                 success: true,
+                new_hotel,
                 message: "el hotel se creó satisfactoriamente"
             })
         } catch(error) {
@@ -34,12 +35,12 @@ read: async(req, res) =>{
     }
     try {
       let allhotels = await Hotel.find(query).sort(order);
-      if (allhotels) {
+      if (allhotels.lenght==0) {
         res.status(200).json({
-            allhotels,
+       allhotels,
           success: true,
           message: "Hotels were successfully found",
-        });
+        })
       } else {
         res.status(404).json({
           success: false,
@@ -84,7 +85,7 @@ if(uno){
   })
 }else{
   res.status(404).json({
-    success: fals,
+    success: false,
     message: "el hotel no se encontro"
   })
 }
