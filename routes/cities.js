@@ -4,8 +4,7 @@ const validator = require('../middlewares/validator')
 
 let {create, read, update, destroy, readOne} = require('../controllers/city')
 
-router.route("/")
-    .post(validator(schema),create)
+router.route("/").post(validator(schema),create)
 
 /* router.post("/", create) */
 router.get("/", read)
