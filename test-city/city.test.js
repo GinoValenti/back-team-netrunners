@@ -3,6 +3,29 @@ const chai = require('chai')
 const assert = chai.assert
 const request = require('supertest')
 
+describe('GET /api/cities/:id', function(){
+    
+    it('Deberia traerme un array de objetos', function (done){
+        
+        request(app)
+            .get('/api/cities')
+            .expect(response =>{
+                assert.typeOf(response.body.allcities, 'array')
+                response.body.allcities.forEach(e => {
+                    assert.typeOf(e, 'object')
+                })
+            })
+            .end(function(err, res) {
+                if(err){
+                    return done(err)
+                }
+                done()  
+            })
+    })
+
+
+})
+
 /* describe('GET /api/cities/:id', function(){
     
     it('Deberia traerme un array', function (done){
@@ -36,7 +59,7 @@ const request = require('supertest')
 
     })}); */
 
-describe('POST /api/cities', function() {
+/* describe('POST /api/cities', function() {
     it('Se creo una frikin ciudad', function(done) {
       request(app)
         .post('/api/cities')
@@ -58,4 +81,4 @@ describe('POST /api/cities', function() {
         })
         
     });
-  });
+  }); */
