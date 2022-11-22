@@ -1,8 +1,8 @@
 let router = require('express').Router()
 
-const { readOne, create, update, destroy } = require('../controllers/itinerary')
+const { readOne, create, update, destroy, read } = require('../controllers/itinerary')
 
-
+router.get('/', read)
 router.get("/", readOne)
 router.post("/", create)
 router.put("/itineraryUpdate/:id", update)
