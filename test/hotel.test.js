@@ -4,8 +4,8 @@ const assert = chai.assert
 const request = require('supertest')
 
 //verificar status 404 cuando el filtro no encuentra un hotel
-/* 
-  describe('GET /api/hotels?name=asgkfasla', function () {
+
+/*   describe('GET /api/hotels?name=asgkfasla', function () {
     
  
     it('Must respond with 404 status code', function (done) {
@@ -17,11 +17,11 @@ const request = require('supertest')
                 return done();
             });
     })
-})
+}) */
  
 
 //VERIFICAR QUE EL USUARIO ENVIA UN NUMBER EN EL CAMPO CAPACITY
- describe('POST /api/hotels/', function () {
+/*  describe('POST /api/hotels/', function () {
 
     let hotel = {
         name: "prueba",
@@ -47,11 +47,11 @@ const request = require('supertest')
                 done();
             });
     })
-})  */
+})   */
 
 //VERIFICAR STATUS 201 AL CREAR HOTEL
 
-describe('POST /api/hotels/', function () {
+/* describe('POST /api/hotels/', function () {
 
     let hotel = {
         name: "prueba",
@@ -75,4 +75,4 @@ describe('POST /api/hotels/', function () {
             });
     })
 })
- 
+  */
