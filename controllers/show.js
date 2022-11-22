@@ -25,6 +25,39 @@ const controller = {
         });
       }
     },
+    read: async(req, res) =>{
+      let query = {}
+     
+   
+      if (req.query.userId) {
+        query = {
+          ...query,
+          userId: req.query.userId,
+        };
+      }
+    
+  
+      try {
+        let show = await Show.find(query);
+        if (show) {
+          res.status(200).json({
+         show,
+            success: true,
+            message: "Hotels were successfully found",
+          })
+        } else {
+          res.status(404).json({
+            success: false,
+            message: "No hotel was found",
+          });
+        }
+      } catch (error) {
+        res.status(400).json({
+          success: false,
+          message: error.message,
+        });
+      }
+    },
     create: async(req,respuesta) => { 
 
       try {
