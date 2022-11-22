@@ -43,16 +43,16 @@ const controller = {
   },
     readOne: async (req, res) => {
       let query = {}
-      if (req.query.cityId){
+      if (req.query.userId){
         query = {query,
-            cityId: req.query.cityId,
+            userId: req.query.userId,
         }
       }
         try {
-          let allcities = await Itinerary.find(query).populate('userId')
-          if (allcities) {
+          let itinerary = await Itinerary.find(query)
+          if (itinerary.length>0) {
             res.status(200).json({
-              allcities,
+              itinerary,
               success: true,
               message: "Itineraries were successfully found",
               });
