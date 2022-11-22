@@ -9,6 +9,7 @@ const controller = {
       respuesta.status(201).json({
         id: new_City._id,
         success: true,
+        new_City,
         message: "La ciudad se creó satisfactoriamente",
       });
     } catch (error) {
@@ -21,6 +22,12 @@ const controller = {
   },
   read: async (req, res) => {
     let query = {};
+    if (req.query.userId) {
+      query = {
+        ...query,
+        userId: req.query.userId,
+      };
+    }
     if (req.query.continent) {
       query = {
         ...query,
