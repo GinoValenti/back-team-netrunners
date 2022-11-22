@@ -23,6 +23,12 @@ read: async(req, res) =>{
     let query = {}
     let order = {}
  
+    if (req.query.userId) {
+      query = {
+        ...query,
+        userId: req.query.userId,
+      };
+    }
     if (req.query.order) {
         order = { capacity: req.query.order }
     }
@@ -54,6 +60,7 @@ read: async(req, res) =>{
       });
     }
   },
+ 
   one: async(req,res) => { 
     let { id } = req.params
     try {
