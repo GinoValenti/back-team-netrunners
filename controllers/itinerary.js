@@ -2,18 +2,57 @@ const Itinerary = require("../models/Itinerary")
 const { query } = require("express");
 
 const controller = {
+
+  read: async (req, res) => {
+    let query = {};
+    if (req.query.userId) {
+      query = {
+        ...query,
+        userId: req.query.userId,
+      };
+    }
+    if (req.query.name) {
+      query = {
+        ...query,
+        title: { $regex: req.query.name, $options: "i" },
+      };
+    }
+    try {
+      let itineraries = await Itinerary.find(query).populate("userId", [
+        "name",
+        "photo",
+      ])
+      if (itineraries.length>0) {
+        res.status(200).json({
+          itineraries,
+          success: true,
+          message: "itineraries were successfully found",
+          });
+      } else {
+        res.status(404).json({
+          success: false,
+          message: "No itinerary was found",
+        });
+      }
+    } catch (error) {
+      res.status(400).json({
+        success: false,
+        message: error.message,
+      });
+    }
+  },
     readOne: async (req, res) => {
       let query = {}
-      if (req.query.cityId){
+      if (req.query.userId){
         query = {query,
-            cityId: req.query.cityId,
+            userId: req.query.userId,
         }
       }
         try {
-          let allcities = await Itinerary.find(query).populate('userId')
-          if (allcities) {
+          let itinerary = await Itinerary.find(query)
+          if (itinerary.length>0) {
             res.status(200).json({
-              allcities,
+              itinerary,
               success: true,
               message: "Itineraries were successfully found",
               });
