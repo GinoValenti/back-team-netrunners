@@ -10,13 +10,13 @@ const validator = ( schema ) => [
         // en true valida individualmente
         // validate nos devuelve un objeto con propiedades, alguna de ellas tiene un array con todos los errores
         // el objeto que esta en data tiene una propiedad "error" con todos los detalles de los errores de validacion
-       console.log(data)
-       console.log(data.error)
-       console.log(data.error.details);;
         if (data.error) {
-            return res.status(400).json({
+            console.log(data.error.details);
+            // Se pueda o no se pueda lograr debe tener 200 xq la res
+            // a este metodo tiene que estar toda adentro del try
+            return res.status(200).json({
                 success: false,
-                message: data.error.details
+                message: data.error.details.map(error=>error.message)
                 // data.error.details es el array con todos los errores 
             })
         }
