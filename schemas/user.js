@@ -11,6 +11,16 @@ const schema = joi.object({
             'string.min': 'NAME_TOO_SHORT',
             'string.max': 'NAME_TOO_LARGE',
         }),
+    lastname: joi.string()
+        .required()
+        .min(3)
+        .max(50)
+        .messages({
+            'any.required': 'LASTNAME_REQUIRED',
+            'string.empty': 'LASTNAME_REQUIRED',
+            'string.min': 'LASTNAME_TOO_SHORT',
+            'string.max': 'LASTNAME_TOO_LARGE',
+        }),
     age: joi.number()
         .required()
         .min(18)
