@@ -5,7 +5,7 @@ let user = require('./users')
 let itineraries = require('./itinerary')
 
 router.use('/cities', city)
-router.use('/users', user)
+router.use('/auth', user)
 router.use('/cities/:id', city)
 router.use('/itinerary', itineraries)
 
