@@ -8,7 +8,7 @@ router.use('/cities', city)
 router.use('/users', user)
 router.use('/cities/:id', city)
 router.use('/itinerary', itineraries)
-
+router.use('/auth',user)
 let hotels = require("./hotel") //ubicacion de las rutas de hoteles
  router.use("/", hotels)
 
