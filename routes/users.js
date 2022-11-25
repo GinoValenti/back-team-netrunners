@@ -5,10 +5,12 @@ const accountExistsSignUp = require('../middlewares/accountExistsSignUp')
 const accountExistsSignIn = require('../middlewares/accountExistsSignIn')
 const accountHasBeenVerified = require('../middlewares/accountHasBeenVerified')
 const mustSignIn = require('../middlewares/mustSignIn')
-const { register,verified} = require('../controllers/usuario')
-const { ingresar, ingresarConToken, salir } = require('../controllers/user')
+const { register,verified, readUsers} = require('../controllers/usuario')
+const { ingresar, ingresarConToken, salir} = require('../controllers/user')
 const passport = require('../config/passport')
 
+
+router.get('/users', readUsers)
 
 router.post('/signup', validator(schema), accountExistsSignUp, register)
 
