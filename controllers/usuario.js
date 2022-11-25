@@ -2,10 +2,35 @@ const bcryptjs = require('bcryptjs')
 const crypto = require('crypto')
 const User = require('../models/User')
 const accountVerificationEmail = require('./accountVerificationEmail')
-const { userSignedUpResponse, userNotFoundResponse, invalidCredentialsResponse, userSignedOutResponse } = require('../config/responses')
+const { userSignedUpResponse, userNotFoundResponse } = require('../config/responses')
 
 
 const controller = {
+
+    readUsers : async(req,res,next) => {
+        let query = {}
+        
+
+
+        try {
+            let allusers = await User.find(query)
+                if (allusers) {
+                    res.status(200).json({
+                        response : allusers,
+                        success: true,
+                        message: "Se obtuvieron usuarios"
+                    })
+                } else {
+                    res.status(404).json({
+                        success: false,
+                        message: "No hay usuarios"
+                    })
+                }
+        } catch(error) {
+            next(error)
+        }
+
+    },
     
     register : async(req,res,next) => {
 
