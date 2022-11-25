@@ -45,6 +45,7 @@ const schema = joi.object({
             'string.empty': 'email is required',
             'string.email': 'must be a valid email'
         }),
+    role: joi.string(),
     password: joi.string()
     .required()
     .min(10)
