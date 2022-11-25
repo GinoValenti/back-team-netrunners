@@ -6,46 +6,53 @@ const schema = joi.object({
         .min(3)
         .max(50)
         .messages({
-            'any.required': 'NAME_REQUIRED',
-            'string.empty': 'NAME_REQUIRED',
-            'string.min': 'NAME_TOO_SHORT',
-            'string.max': 'NAME_TOO_LARGE',
+            'any.required': 'name is required',
+            'string.empty': 'name is required',
+            'string.min': 'name is too short',
+            'string.max': 'name is too large',
         }),
     lastname: joi.string()
         .required()
         .min(3)
         .max(50)
         .messages({
-            'any.required': 'LASTNAME_REQUIRED',
-            'string.empty': 'LASTNAME_REQUIRED',
-            'string.min': 'LASTNAME_TOO_SHORT',
-            'string.max': 'LASTNAME_TOO_LARGE',
+            'any.required': 'lastname is required',
+            'string.empty': 'lastname is required',
+            'string.min': 'lastname is too short',
+            'string.max': 'lastname is too large',
         }),
     age: joi.number()
         .required()
         .min(18)
         .messages({
-            'any.required': 'AGE_REQUIRED',
-            'number.base': 'AGE_REQUIRED',
-            'number.min': 'INVALID_AGE',
+            'any.required': 'age is required',
+            'number.base': 'age is required',
+            'number.min': 'age must be over 18',
         }),
     photo: joi.string()
         .required()
         .uri()
         .messages({
-            'any.required': 'IMG_REQUIRED',
-            'string.empty': 'IMG_REQUIRED',
-            'string.uri':'INVALID_URL'
+            'any.required': 'image is required sorry',
+            'string.empty': 'image is required sorry',
+            'string.uri':'image must have a valid url'
         }),
     email: joi.string()
         .required()
         .email({minDomainSegments: 2})
         .messages({
-            'any.required': 'MAIL_REQUIRED',
-            'string.empty': 'MAIL_REQUIRED',
-            'string.email': 'INVALID_MAIL'
+            'any.required': 'email is required',
+            'string.empty': 'email is required',
+            'string.email': 'must be a valid email'
         }),
-    password: joi.string().required(),
+    password: joi.string()
+    .required()
+    .min(10)
+    .messages({
+        'any.required' : 'password is required',
+        'string.empty' : 'password is required',
+        'string.min' : 'password is too short'
+    })
 })
 
 module.exports = schema

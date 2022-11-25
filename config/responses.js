@@ -8,7 +8,7 @@ function userExistsResponse(req,res) {
 function userSignedUpResponse(req,res) {
     return res.status(201).json({
         success: true,
-        message: 'user signed up'
+        message: 'user signed up, next step is to verify your account'
     })
 }
 
