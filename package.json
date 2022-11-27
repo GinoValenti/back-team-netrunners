@@ -6,7 +6,8 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "test-hotel": "mocha ./test/hotel.test.js --timeout 10000",
-    "test-city": "mocha ./test-city/city.test.js"
+    "test-city": "mocha ./test-city/city.test.js",
+    "test-show": "mocha ./test/show.test.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
