@@ -1,4 +1,4 @@
-const { verifyResponse } = require("../config/responses")
+const { verifyResponse } = require("../controllers/responses")
 
 function accountHasBeenVerified(req, res, next) {
     if (req.user.verified) {

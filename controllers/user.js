@@ -2,7 +2,7 @@ const Usuario = require('../models/User')
 const bcryptjs = require('bcryptjs') 
 const crypto = require('crypto')
 const accountVerificationEmail = require('./accountVerificationEmail')
-const { invalidCredentialsResponse, userSignedOutResponse } = require('../config/responses')
+const { invalidCredentialsResponse, userSignedOutResponse } = require('./responses')
 const jwt = require('jsonwebtoken')
 
 
@@ -44,6 +44,7 @@ const controller = {
             return res.json({
                 response: {
                     user: {
+                        id: user.id,
                         name: user.name,
                         photo: user.photo,
                         role: user.role
@@ -57,7 +58,7 @@ const controller = {
         }
     },
     
-    salir: async (req, res, next) => {
+/*     salir: async (req, res, next) => {
       
         const { id } = req.user
         
@@ -70,7 +71,7 @@ const controller = {
         }
     }
 
-   
+    */
 
 }
 

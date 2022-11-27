@@ -1,5 +1,5 @@
 const Usuario = require("../models/User");
-const { invalidCredentialsResponse } = require("../config/responses")
+const { invalidCredentialsResponse } = require("../controllers/responses")
 
 async function accountExistsSignIn(req, res, next) {
     const user = await Usuario.findOne({email: req.body.email})

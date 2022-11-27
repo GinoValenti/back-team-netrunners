@@ -1,4 +1,4 @@
-const mustSignInResponse = require('../config/responses')
+const mustSignInResponse = require('../controllers/responses')
 
 function mustSignIn(req, res, next) {
     if(req.user) {
