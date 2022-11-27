@@ -5,7 +5,7 @@ const accountExistsSignUp = require('../middlewares/accountExistsSignUp')
 const accountExistsSignIn = require('../middlewares/accountExistsSignIn')
 const accountHasBeenVerified = require('../middlewares/accountHasBeenVerified')
 const mustSignIn = require('../middlewares/mustSignIn')
-const { register,verified, readUsers} = require('../controllers/usuario')
+const { register,verified, readUsers, logOut} = require('../controllers/usuario')
 const { ingresar, ingresarConToken, salir,one,update} = require('../controllers/user')
 const passport = require('../config/passport')
 
@@ -21,5 +21,5 @@ const schemaLogin = require("../schemas/userLogin")
 
 router.post('/signin',validator(schemaLogin), accountExistsSignIn,accountHasBeenVerified,ingresar)
 router.post('/token', passport.authenticate('jwt', {session: false}), mustSignIn, ingresarConToken)
-router.put('/signout', passport.authenticate('jwt', {session: false}), salir)
+router.put('/signout', passport.authenticate('jwt', {session: false}), logOut)
 module.exports = router
