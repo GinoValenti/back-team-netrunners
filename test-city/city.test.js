@@ -3,7 +3,25 @@ const chai = require('chai')
 const assert = chai.assert
 const request = require('supertest')
 
-describe('GET /api/cities/:id', function(){
+
+describe('delete /api/cities/citiesDelete/:id', function (){
+    it('Deberia borrar una ciudad', function (done) {
+        request(app)
+            .delete('/api/cities/citiesDelete')
+            .send({
+                _id:"637d6398c1c309a42442200c"
+            })
+            .end(function (err, res){
+                if (err) {
+                    return done(err)
+                }
+                done()
+            })
+    })
+})
+
+
+/* describe('GET /api/cities/:id', function(){
     
     it('Deberia traerme un array de objetos', function (done){
         
@@ -24,7 +42,7 @@ describe('GET /api/cities/:id', function(){
     })
 
 
-})
+}) */
 
 /* describe('GET /api/cities/:id', function(){
     
