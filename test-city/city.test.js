@@ -3,13 +3,14 @@ const chai = require('chai')
 const assert = chai.assert
 const request = require('supertest')
 
+// Test de borrar una ciudad
 
 describe('delete /api/cities/citiesDelete/:id', function (){
     it('Deberia borrar una ciudad', function (done) {
         request(app)
-            .delete('/api/cities/citiesDelete')
-            .send({
-                _id:"637d6398c1c309a42442200c"
+            .delete('/api/cities/citiesDelete/6383fe89bcabbb92811f7e59')
+            .expect(response => {
+                assert.equal(response.status, 200, 'La ciudad deberia haberse borrado')
             })
             .end(function (err, res){
                 if (err) {
