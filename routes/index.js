@@ -1,9 +1,11 @@
 let router = require('express').Router()
 
-let city = require('./cities')
-let user = require('./users')
-let itineraries = require('./itinerary')
+const city = require('./cities')
+const user = require('./users')
+const itineraries = require('./itinerary')
+const reactions = require('./reactions')
 
+router.use('/reactions', reactions)
 router.use('/cities', city)
 router.use('/auth', user)
 router.use('/cities/:id', city)
