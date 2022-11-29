@@ -57,19 +57,6 @@ const controller = {
             next(error)
         }
     },
-    
-     salir: async (req, res, next) => {
-      
-        const { id } = req.user
-        
-        try {
-            await Usuario.findOneAndUpdate({_id: id}, {logged: false})
-
-            return userSignedOutResponse(req, res)
-        } catch (error) {
-            next(error)
-        }
-    },
     one: async(req,res) => { 
         let { id } = req.params
         try {
