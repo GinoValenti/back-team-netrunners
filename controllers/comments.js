@@ -56,7 +56,54 @@ create:  async(req,respuesta) => {
         })
     }
 },
+deleted: async(req,res)=>{
+    let {id} = req.params
+    try {
+      let uno = await Comments.findOneAndDelete({_id: id})
+  if(uno){
+    res.status(200).json({
+      id: uno._id,
+      success: true,
+      message: "el comentario se elimino satisfactoriamente"
+    })
+  }else{
+    res.status(404).json({
+      success: false,
+      message: "el comentario no se encontro"
+    })
+  }
+    } catch (error) {
+      res.status(400).json({
+        success:false,
+        menssage:error.message
+      })
+  
+    }
+  },
+update: async(req,res)=>{
+  let {id} = req.params
+  try {
+    let uno = await Comments.findOneAndUpdate({_id: id},req.body,{new:true})
+if(uno){
+  res.status(200).json({
+    id: uno._id,
+    success: true,
+    message: "el comentario se modifico satisfactoriamente"
+  })
+}else{
+  res.status(404).json({
+    success: false,
+    message: "el comentario no se encontro"
+  })
+}
+  } catch (error) {
+    res.status(400).json({
+      success:false,
+      menssage:error.message
+    })
 
+  }
+}
 
 
 
