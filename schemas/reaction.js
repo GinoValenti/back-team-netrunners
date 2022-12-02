@@ -1,20 +1,34 @@
 const joi = require('joi')
 
-const schema = joi.object({
-    name: joi.string()
+
+const schema = joi.object({ 
+        itineraryId: joi.string(),
+        name: joi.string()
         .required()
+        .min(3)
+        .max(50)
         .messages({
-            "any.required" : 'name is required',
-            "string.empty" : 'name is required'
-        }),
-    icon: joi.string()
+            "any.required": "NAME_REQUIRED",
+            "string.empty": "NAME_REQUIRED",
+            "string.min": "NAME_TOO_SHORT",
+            "string.max": "NAME_TOO_LARGE",
+        }), 
+        icon: joi.string()
+        .min(3)
         .required()
         .uri()
         .messages({
-            'any.required' :'icon is required',
-            'string.empty' :'image is required',
-            'string.uri': 'url is not valid'
-        })
+            "any.required": "a URL photo is required",
+            "string.empty": "complete the URL photo, please",
+          }),
+        iconBack: joi.string()
+        .min(3)
+        .required()
+        .uri()
+        .messages({
+            "any.required": "a URL photo is required",
+            "string.empty": "complete the URL photo, please",
+            })
 })
 
 module.exports = schema

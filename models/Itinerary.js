@@ -10,5 +10,5 @@ const schema = new mongoose.Schema({
     userId:{type: mongoose.Types.ObjectId, ref: 'user', required: true},
 })
 
-const Itinerary = mongoose.model('itinerary', schema)
+const Itinerary = mongoose.model('itineraries', schema)
 module.exports = Itinerary
