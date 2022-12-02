@@ -3,7 +3,7 @@ const schema = require("../schemas/hotel")
 const validator = require("../middlewares/validator")
 let {create, read,one,update,deleted} = require("../controllers/hotel")
 const passport = require('../config/passport')
-//uso el metodo post para crear un nuevo usuario
+
 router.route("/hotels").post(validator(schema),passport.authenticate('jwt', {session: false}),create)
 router.route("/hotels").get(read)
 router.route('/hotels/:id').get(one)
