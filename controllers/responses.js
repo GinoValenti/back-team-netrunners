@@ -39,6 +39,19 @@ function invalidCredentialsResponse(req,res) {
         message: 'email or password incorrect'
     })
 }
+function mustBeTheOwner(req, res) {
+    return res.status(401).json({
+      success: false,
+      message: "You must be the owner to carry out this operation",
+    });
+  }
+
+  function activityNotFound(req, res) {
+    return res.status(404).json({
+      success: false,
+      message: "Couldn't find the activity",
+    });
+  }
 
 function verifyResponse(req,res) {
     return res.status(401).json({
@@ -49,6 +62,8 @@ function verifyResponse(req,res) {
 
 module.exports = {
     userSignedUpResponse,
+    mustBeTheOwner,
+    activityNotFound,
     userExistsResponse,
     userNotFoundResponse,
     userSignedOutResponse,
