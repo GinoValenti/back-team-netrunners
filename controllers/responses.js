@@ -60,6 +60,20 @@ function verifyResponse(req,res) {
     })
 }
 
+function verifyUser(req, res) {
+    return res.status(401).json({
+        success: false,
+        message: "No reactions of you here",
+    });
+}
+
+function notFound(req, res) {
+    return res.status(404).json({
+        success: false,
+        message: "Couldn't find the activity",
+    });
+}
+
 module.exports = {
     userSignedUpResponse,
     mustBeTheOwner,
@@ -69,5 +83,7 @@ module.exports = {
     userSignedOutResponse,
     mustSignInResponse,
     invalidCredentialsResponse,
-    verifyResponse
+    verifyResponse,
+    verifyUser,
+    notFound
 }
