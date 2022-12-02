@@ -1,9 +1,27 @@
-var express = require('express');
-var router = express.Router();
+let router = require('express').Router()
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+const city = require('./cities')
+const user = require('./users')
+const itineraries = require('./itinerary')
+const reactions = require('./reactions')
 
-module.exports = router;
+router.use('/reactions', reactions)
+
+let comments = require("./comments")
+
+router.use('/cities', city)
+router.use('/auth', user)
+router.use('/cities/:id', city)
+router.use('/itinerary', itineraries)
+let hotels = require("./hotel") //ubicacion de las rutas de hoteles
+ router.use("/", hotels)
+ router.use("/", comments)
+let shows = require("./show")
+
+router.use("/", shows)
+
+
+
+
+
+module.exports = router 
