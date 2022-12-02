@@ -18,8 +18,8 @@ router.get('/verify/:code', verified)
 router.route('/me/:id').get(one)
 router.route('/me/:id').patch(passport.authenticate('jwt', {session: false}),update)
 const schemaLogin = require("../schemas/userLogin")
-
 router.post('/signin',validator(schemaLogin), accountExistsSignIn,accountHasBeenVerified,ingresar)
 router.post('/token', passport.authenticate('jwt', {session: false}), mustSignIn, ingresarConToken)
 router.put('/signout', passport.authenticate('jwt', {session: false}), logOut)
+
 module.exports = router
