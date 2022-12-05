@@ -66,7 +66,7 @@ const controller = {
             if (user) {
                 user.verified = true
                 await user.save()
-                res.redirect('https://mytinerary-netrunners.vercel.app/')
+                res.redirect('https://mytinerary-netrunners.vercel.app')
             }
             return userNotFoundResponse(req, res)
         } catch (error) {
