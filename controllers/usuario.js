@@ -38,7 +38,7 @@ const controller = {
 
         let { name, lastname, age, email, password, photo, role } = req.body
 
-        let verified = false
+        let verified = true
         let logged = false
         let code = crypto.randomBytes(10).toString('hex')
 
