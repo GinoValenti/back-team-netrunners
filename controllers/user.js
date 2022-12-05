@@ -6,7 +6,7 @@ const { invalidCredentialsResponse, userSignedOutResponse } = require('./respons
 const jwt = require('jsonwebtoken')
 
 
-const controller = {
+const controller = { 
     ingresar: async (req, res, next) => {
         const { password } = req.body;
         const {user} = req;
