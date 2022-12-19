@@ -8,14 +8,26 @@ let cors = require('cors')
 const errorHandler = require('./middlewares/errorHandler')
 require("./config/database")
 var indexRouter = require('./routes/index');
-
+const config = {
+  application: {
+      cors: {
+          server: [
+              {
+                  origin: "*", //servidor que deseas que consuma o (*) en caso que sea acceso libre
+                  credentials: true
+              }
+          ]
+      }
+}}
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(cors())
+app.use(cors(
+  config.application.cors.server
+));
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
