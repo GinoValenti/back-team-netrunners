@@ -36,8 +36,9 @@ const controller = {
 
  
 
-        let { name, lastname, age, email, password, photo, role } = req.body
-
+        let { name, lastname, email, password } = req.body
+let role="user"
+let photo="https://startupheretoronto.com/wp-content/uploads/2019/03/default-user-image-2.png"
         let verified = true
         let logged = false
         let code = crypto.randomBytes(10).toString('hex')
@@ -46,7 +47,7 @@ const controller = {
 
         try {
 
-            await User.create({ name, lastname, age, email, password, photo , role, verified, logged, code })
+            await User.create({ name, lastname, email, password, photo , role, verified, logged, code })
       
             await accountVerificationEmail(email, code)
             return userSignedUpResponse(req, res)

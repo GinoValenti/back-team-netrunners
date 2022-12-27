@@ -21,22 +21,8 @@ const schema = joi.object({
             'string.min': 'lastname is too short',
             'string.max': 'lastname is too large',
         }),
-    age: joi.number()
-        .required()
-        .min(18)
-        .messages({
-            'any.required': 'age is required',
-            'number.base': 'age is required',
-            'number.min': 'age must be over 18',
-        }),
-    photo: joi.string()
-        .required()
-        .uri()
-        .messages({
-            'any.required': 'image is required sorry',
-            'string.empty': 'image is required sorry',
-            'string.uri':'image must have a valid url'
-        }),
+
+
     email: joi.string()
         .required()
         .email({minDomainSegments: 2})
@@ -45,7 +31,7 @@ const schema = joi.object({
             'string.empty': 'email is required',
             'string.email': 'must be a valid email'
         }),
-    role: joi.string(),
+ 
     password: joi.string()
     .required()
     .min(10)
